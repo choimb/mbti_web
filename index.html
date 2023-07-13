@@ -21,15 +21,15 @@
       <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
         <div>
           <img src="지누/main.png" alt="이미지" style="width: 400px;" class="img-fluid">
+          <p>
+            <br>
+            경상국립대학교 2023 1학기 개척학기제 정보의 바다 팀 제작 <br>
+            아래의 시작하기 버튼을 눌러 검사를 시작해보세요!
+          </p>
+            <button type="button" class="btn btn-outline-danger mt-3" onclick="goToHowPage()">시작하기</button>
+            <button type="button" class="btn btn-outline-danger mt-3" onclick="skip()">모든 유형 보러가기</button>
         </div>
       </div>
-      <p>
-        <br>
-        경상국립대학교 2023 1학기 개척학기제 정보의 바다 팀 제작 <br>
-        아래의 시작하기 버튼을 눌러 검사를 시작해보세요!
-      </p>
-        <button type="button" class="btn btn-outline-danger mt-3" onclick="goToHowPage()">시작하기</button>
-        <button type="button" class="btn btn-outline-danger mt-3" onclick="skip()">모든 유형 보러가기</button>
     </div>
   </div>
 
@@ -37,40 +37,40 @@
     <div id="how-page" style="display: none;" class="mx-auto my-5 py-5 px-3">
       <h1 style="font-size: 24px;">지금부터 제시되는 7개의 상황에서 귀하가 할 말을 작성해주세요.</h1>
       <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
-      </div>
-      <p>
-         <br>
-        단답식보다는 길게 써주실수록 더 정확한 결과 산출에 도움이 됩니다. <br>
-        행동 서술이 아닌 대화체로 작성해주세요! <br>
-        ex. 싫다고 한다. (X) / 나는 그렇게 하기 싫어. (O)
-      </p>
+        <p>
+           <br>
+          단답식보다는 길게 써주실수록 더 정확한 결과 산출에 도움이 됩니다. <br>
+          행동 서술이 아닌 대화체로 작성해주세요! <br>
+          ex. 싫다고 한다. (X) / 나는 그렇게 하기 싫어. (O)
+        </p>
         <button type="button" class="btn btn-outline-danger mt-3" onclick="goToInputPage()">다음</button>
+      </div>
     </div>
   </div>
 
   <div class="container">
     <div id="input-page1" style="display: none;" class="mx-auto my-5 py-5 px-3">
       <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
-      </div>
-      <p>
-        1. 대학교 신입생 오리엔테이션에서 자기소개를 한다. <br>
-        이름과 학번을 말한 후에 어떤 내용을 덧붙일까?
-      </p>
+        <p>
+          1. 대학교 신입생 오리엔테이션에서 자기소개를 한다. <br>
+          이름과 학번을 말한 후에 어떤 내용을 덧붙일까?
+        </p>
         <textarea id="input-text1" rows="6" cols="100"></textarea>
         <button class="btn btn-outline-danger mt-1" onclick="goTonextPage1()">다음</button>
+      </div>
     </div>
   </div>
 
   <div class="container">
     <div id="input-page2" style="display: none;" class="mx-auto my-5 py-5 px-3">
       <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
-      </div>
-      <p>
-        2. 사장으로서 일을 못하는 직원 김철수를 해고해야 한다면 직원에게 뭐라고 말하면서 알려야 할까?
-      </p>
+        <p>
+          2. 사장으로서 일을 못하는 직원 김철수를 해고해야 한다면 직원에게 뭐라고 말하면서 알려야 할까?
+        </p>
         <textarea id="input-text2" rows="6" cols="100"></textarea>
         <button class="btn btn-outline-danger mt-1" onclick="goToBePage2()">이전</button>
         <button class="btn btn-outline-danger mt-1" onclick="goTonextPage2()">다음</button>
+      </div>
     </div>
   </div>
 
