@@ -182,8 +182,53 @@ function ESTJ2() {
   fadeEffect("ESTJ", "result-page", 300);
 }
 
-function reset() {
+function reset1() {
   fadeEffect("INFP", "main", 300);
+}
+function reset2() {
+  fadeEffect("INTP", "main", 300);
+}
+function reset3() {
+  fadeEffect("INFJ", "main", 300);
+}
+function reset4() {
+  fadeEffect("INTJ", "main", 300);
+}
+function reset5() {
+  fadeEffect("ISFP", "main", 300);
+}
+function reset6() {
+  fadeEffect("ISTP", "main", 300);
+}
+function reset7() {
+  fadeEffect("ISFJ", "main", 300);
+}
+function reset8() {
+  fadeEffect("ISTJ", "main", 300);
+}
+function reset9() {
+  fadeEffect("ENFP", "main", 300);
+}
+function reset10() {
+  fadeEffect("ENTP", "main", 300);
+}
+function reset11() {
+  fadeEffect("ENFJ", "main", 300);
+}
+function reset12() {
+  fadeEffect("ENTJ", "main", 300);
+}
+function reset13() {
+  fadeEffect("ESFP", "main", 300);
+}
+function reset14() {
+  fadeEffect("ESTP", "main", 300);
+}
+function reset15() {
+  fadeEffect("ESFJ", "main", 300);
+}
+function reset16() {
+  fadeEffect("ESTJ", "main", 300);
 }
 
 function skip() {
