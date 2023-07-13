@@ -1,0 +1,220 @@
+#main{
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+
+#how-page{
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+
+#input-page1{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+}
+#input-page2{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+}
+#input-page3{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+}
+#input-page4{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+}
+#input-page5{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+}
+#input-page6{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+}
+#input-page7{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 20px;
+}
+
+
+#result-page{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.btn-custom {
+    margin-right: -10px; /* 버튼들 사이의 가로 간격 설정 */
+    width: 50px; /* 버튼의 가로 길이 설정 */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+#INFP{
+  display: none;
+  background-color: white;
+  width: 80%;
+  border-radius: 20px;
+  font-size: 18px;
+}
+#INTP{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#INFJ{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#INTJ{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#ISFP{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#ISTP{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#ISFJ{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#ISTJ{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#ENFP{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#ENTP{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#ENFJ{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#ENTJ{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#ESFP{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#ESTP{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#ESFJ{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+#ESTJ{
+  display: none;
+  background-color: white;
+  width: 80%;
+  text-align: center;
+  border-radius: 20px;
+}
+
+.image-container {
+  display: flex;
+}
+
+.image-wrapper {
+  flex: 1;
+  text-align: center;
+}
+
+.image-description {
+  font-size: 15px;
+  margin-top: 5px;
+}

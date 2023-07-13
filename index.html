@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title></title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="default.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="animation.css"
+
+</head>
+
+<body>
+  <div class="container">
+    <div id="main" class="mx-auto my-5 py-5 px-3">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div>
+          <img src="지누/main.png" alt="이미지" style="width: 400px;" class="img-fluid">
+        </div>
+      </div>
+      <p>
+        <br>
+        경상국립대학교 2023 1학기 개척학기제 정보의 바다 팀 제작 <br>
+        아래의 시작하기 버튼을 눌러 검사를 시작해보세요!
+      </p>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="goToHowPage()">시작하기</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="skip()">모든 유형 보러가기</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="how-page" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px;">지금부터 제시되는 7개의 상황에서 귀하가 할 말을 작성해주세요.</h1>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+      </div>
+      <p>
+         <br>
+        단답식보다는 길게 써주실수록 더 정확한 결과 산출에 도움이 됩니다. <br>
+        행동 서술이 아닌 대화체로 작성해주세요! <br>
+        ex. 싫다고 한다. (X) / 나는 그렇게 하기 싫어. (O)
+      </p>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="goToInputPage()">다음</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="input-page1" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+      </div>
+      <p>
+        1. 대학교 신입생 오리엔테이션에서 자기소개를 한다. <br>
+        이름과 학번을 말한 후에 어떤 내용을 덧붙일까?
+      </p>
+        <textarea id="input-text1" rows="6" cols="100"></textarea>
+        <button class="btn btn-outline-danger mt-1" onclick="goTonextPage1()">다음</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="input-page2" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+      </div>
+      <p>
+        2. 사장으로서 일을 못하는 직원 김철수를 해고해야 한다면 직원에게 뭐라고 말하면서 알려야 할까?
+      </p>
+        <textarea id="input-text2" rows="6" cols="100"></textarea>
+        <button class="btn btn-outline-danger mt-1" onclick="goToBePage2()">이전</button>
+        <button class="btn btn-outline-danger mt-1" onclick="goTonextPage2()">다음</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="input-page3" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+      </div>
+      <p>
+        3. 소개팅 상대가 마음에 들지 않는다. 귀가 후 어땠냐고 묻는 소개팅 주선자에게 뭐라고 말해야 할까?
+      </p>
+        <textarea id="input-text3" rows="6" cols="100"></textarea>
+        <button class="btn btn-outline-danger mt-1" onclick="goToBePage3()">이전</button>
+        <button class="btn btn-outline-danger mt-1" onclick="goTonextPage3()">다음</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="input-page4" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+      </div>
+      <p>
+        4. 외출 준비 후 집을 나서려는데 갑자기 친구에게서 약속을 취소하자는 연락이 왔다. 뭐라고 답장을 할까?
+      </p>
+        <textarea id="input-text4" rows="6" cols="100"></textarea>
+        <button class="btn btn-outline-danger mt-1" onclick="goToBePage4()">이전</button>
+        <button class="btn btn-outline-danger mt-1" onclick="goTonextPage4()">다음</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="input-page5" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+      </div>
+      <p>
+        5. 학점이 좋은 3학년 친구가 전공이 적성에 맞지 않아 재수를 고민하고 있을 때 뭐라고 조언해야 할까?
+      </p>
+        <textarea id="input-text5" rows="6" cols="100"></textarea>
+        <button class="btn btn-outline-danger mt-1" onclick="goToBePage5()">이전</button>
+        <button class="btn btn-outline-danger mt-1" onclick="goTonextPage5()">다음</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="input-page6" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+      </div>
+      <p>
+        6. 피자가 완전히 찌그러진 채로 배달왔지만 맛은 최고였다. <br>
+        피자 가게에 후기를 남긴다면 본문은 뭐라고 작성할까?
+      </p>
+        <textarea id="input-text6" rows="6" cols="100"></textarea>
+        <button class="btn btn-outline-danger mt-1" onclick="goToBePage6()">이전</button>
+        <button class="btn btn-outline-danger mt-1" onclick="goTonextPage6()">다음</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="input-page7" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+      </div>
+      <p>
+        7. 아르바이트 월급이 5일째 들어오지 않아서 사장님께 여쭤본다면 어떻게 말씀을 드릴까?
+      </p>
+        <textarea id="input-text7" rows="6" cols="100"></textarea>
+        <button class="btn btn-outline-danger mt-1" onclick="goToBePage7()">이전</button>
+        <button class="btn btn-outline-danger mt-1" onclick="goTonextPage7()">다음</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="result-page" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 25px;"> 입력한 내용 </h1>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div id="result" style="border: 2px solid #0052af; padding: 20px;"></div>
+        <p>
+           <br>
+          위 내용을 복사하여 예측 모델에 입력하세요. <br>
+           <br>
+           ▼<br>
+           <br>
+          아래 버튼을 눌러 모델이 예측한 MBTI 유형 페이지로 이동하세요.
+        </p>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="INFP()">INFP</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="INTP()">INTP</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="INFJ()">INFJ</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="INTJ()">INTJ</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="ISFP()">ISFP</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="ISTP()">ISTP</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="ISFJ()">ISFJ</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="ISTJ()">ISTJ</button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="ENFP()">ENFP</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="ENTP()">ENTP</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="ENFJ()">ENFJ</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="ENTJ()">ENTJ</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="ESFP()">ESFP</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="ESTP()">ESTP</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="ESFJ()">ESFJ</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-danger mt-1 btn-custom" onclick="ESTJ()">ESTJ</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="INFP" style="display: none; width: 90%;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #상냥함 #이타주의적 #외유내강 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> INFP </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="지누/INFP.png" class="img-fluid" style="width: 300px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            행복한 지누
+          </p>
+          <p style="text-align: left; font-size: 17px;">
+            - 이 유형은 열정적인 중재자 타입입니다. 언뜻 보기엔 조용하고 수줍음이 많은 것처럼 보이지만, 실은 마음 속에 에너지와 열정이 넘치는 성격입니다. </p>
+          <p style="text-align: left; font-size: 17px;">
+            - 이들은 상냥한 이타주의자로, 건강하고 밝으며 낭만적입니다. 최악의 상황에서도 좋은 면을 찾을 정도로 긍정적인 이상주의자이기도 합니다. 공감 능력이 높고 남을 도우려하며, 깊고 의미있는 관계를 원하는 편입니다. 마음이 맞는 사람을 만나면 내재한 충만한 즐거움과 넘치는 영감을 경험할 수 있습니다. </p>
+          <p style="text-align: left; font-size: 17px;">
+            - 종종 외로움을 느끼거나 존재감을 드러내지 못할 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다. </p>
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            나와 성격이 비슷한 인물
+          </p>
+          <div class="image-container">
+            <div class="image-wrapper">
+              <img src="지누/INTP.png" alt="사진 1" style="width: 170px;">
+              <p class="image-description">아이유</p>
+            </div>
+            <div class="image-wrapper">
+              <img src="지누/ENFP.png" alt="사진 2" style="width: 170px;">
+              <p class="image-description">강호동</p>
+            </div>
+            <div class="image-wrapper">
+              <img src="지누/INFJ.png" alt="사진 3" style="width: 170px;">
+              <p class="image-description">김숙</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="INFP2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="INTP" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #논리적 #혁신적 #호기심 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> INTP </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="지누/INTP.png" class="img-fluid" style="width: 300px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            눈치빠른 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="INTP2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="INFJ" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #통찰력 #신비로움 #이상주의 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> INFJ </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/INFJ.png" class="img-fluid" style="width: 300px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            공감하는 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="INFJ2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="INTJ" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #상상력 #철두철미 #독립적 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> INTJ </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/INTJ.png" class="img-fluid" style="width: 350px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            자신감 넘치는 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="INTJ2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="ISFP" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #온화함 #도전적 #융통성 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> ISFP </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/ISFP.png" class="img-fluid" style="width: 350px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            자유분방 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="ISFP2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="ISTP" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #대담함 #과묵함 #적응력 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> ISTP </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/ISTP.png" class="img-fluid" style="width: 350px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            효율주의 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="ISTP2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="ISFJ" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #헌신적 #인내심 #성실함 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> ISFJ </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/ISFJ.png" class="img-fluid" style="width: 300px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            순둥이 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="ISFJ2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="ISTJ" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #사실근거 #책임감 #현실주의 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> ISTJ </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/ISTJ.png" class="img-fluid" style="width: 350px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            고집스런 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="ISTJ2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="ENFP" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #창의적 #순발력 #자유로움 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> ENFP </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/ENFP.png" class="img-fluid" style="width: 340px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            행복한 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="ENFP2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="ENTP" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #독창적 #박학다식 #호기심 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> ENTP </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/ENTP.png" class="img-fluid" style="width: 330px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            여유로운 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="ENTP2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="ENFJ" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #카리스마 #의견존중 #사교적 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> ENFJ </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/ENFJ.png" class="img-fluid" style="width: 300px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            다정한 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="ENFJ2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="ENTJ" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #통솔력 #준비철저 #강한의지 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> ENTJ </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/ENTJ.png" class="img-fluid" style="width: 380px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            카리스마 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="ENTJ2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="ESFP" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #즉흥적 #열정 #사실중시 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> ESFP </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/ESFP.png" class="img-fluid" style="width: 300px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            활발한 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="ESFP2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="ESTP" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #명석한두뇌 #직관력 #느긋함 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> ESTP </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/ESTP.png" class="img-fluid" style="width: 350px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+             직설적인 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="ESTP2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="ESFJ" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #친절함 #지적인도전 #공감능력 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> ESFJ </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/ESFJ.png" class="img-fluid" style="width: 370px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            긍정적인 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="ESFJ2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div id="ESTJ" style="display: none;" class="mx-auto my-5 py-5 px-3">
+      <h1 style="font-size: 24px; text-align: center;"> 당신의 MBTI 유형은 ... </h1>
+      <h2 style="font-size: 17px; color: #8BBDFF; text-align: center;"> #체계적 #규칙준수 #관리능력 </h2>
+      <h3 style="font-weight: bold; font-size: 55px; color: #0052af; text-align: center;"> ESTJ </h3>
+      <div class="col-lg-6 col-md-8 col-sm-10 col-12 mx-auto">
+        <div style="text-align: center;">
+          <img class="image" src="C:/경상대/개척학기제/web/지누/ESTJ.png" class="img-fluid" style="width: 350px;">
+          <p style="font-weight: bold; font-size: 22px; color: #0052af; text-align: left;">
+             <br>
+            진지한 지누
+          </p>
+          <p style="text-align: left;">
+            - 중재자(INFP)는 언뜻 보기에 조용하고 자신을 내세우지 않는 것처럼 보이지만, 사실은 에너지와 열정이 넘치는 마음을 지닌 성격입니다. <br>
+            - 이들은 창의적이고 상상력이 뛰어나며 몽상을 즐기는 성격으로, 머릿속에서 수많은 이야기를 만들어 내곤 합니다. 또한 음악과 예술과 자연에 대한 감수성이 뛰어나며 다른 사람의 감정을 빠르게 알아차리곤 합니다. <br>
+            - 중재자는 이상주의적이고 공감 능력이 높으며, 깊고 의미 있는 관계를 원하고 다른 사람을 도와야 한다는 사명감을 느끼곤 합니다. 그러나 전체 인구에서 큰 비중을 차지하지 않는 성격이기 때문에 외로움을 느끼거나 존재감을 드러내지 못하는 때가 있으며, 자신의 독특한 강점을 인정하지 않는 세상에서 방황하는 느낌을 받을 수도 있습니다.
+          </p>
+        </div>
+      </div>
+      <div style="width: 100%; text-align: center;">
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="ESTJ2()">이전</button>
+        <button type="button" class="btn btn-outline-danger mt-3" onclick="reset()">처음으로 돌아가기</button>
+      </div>
+    </div>
+  </div>
+
+    <script src="script.js"> </script>
+</body>
+</html>
